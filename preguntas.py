@@ -11,7 +11,12 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 """
+def Datos ():
+    Data = open ('data.csv', 'r').readline()
+    Data = [z.replace ("\n", "") for z in Data]
+    Data = [z.split("\t") for z in Data]
 
+    return Data
 
 def pregunta_01():
     """
@@ -21,8 +26,13 @@ def pregunta_01():
     214
 
     """
-    return
-
+    SegColumna = [z[1] for z in Datos () [0:]]
+    
+    Suma = 0
+    for i in SegColumna:
+        Suma += int(i)
+        Suma 
+        return Suma
 
 def pregunta_02():
     """
